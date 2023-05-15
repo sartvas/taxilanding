@@ -1,6 +1,27 @@
 * 
     font-family: 'Roboto', sans-serif
 
+@mixin advant
+    margin: 0 auto
+    width: 112px
+    height: 24px
+    background: #000000
+    font-weight: 400
+    font-size: 11px
+    text-transform: uppercase
+    color: #FFFFFF
+    text-align: center
+    line-height: 25px
+
+@mixin header
+    padding-top: 33px
+    font-style: normal
+    font-weight: 900
+    font-size: 38px
+    text-align: center
+    text-transform: uppercase
+    color: #222222
+    
 
 header 
     position: relative
@@ -9,7 +30,6 @@ header
 nav 
     height: 53px
     background: #212121
-    position: fixed
 
 
 .menu 
@@ -110,27 +130,12 @@ nav
 
 
 .reasons 
-    padding: 20px 0px 64px 0
-    height: 817px
+    margin: 20px 0px 64px 0
+    min-height: 817px
     &_advant 
-        margin: 0 auto
-        width: 112px
-        height: 24px
-        background: #000000
-        font-weight: 400
-        font-size: 11px
-        text-transform: uppercase
-        color: #FFFFFF
-        text-align: center
-        line-height: 25px
+        @include advant
     &_header 
-        padding-top: 33px
-        font-style: normal
-        font-weight: 900
-        font-size: 38px
-        text-align: center
-        text-transform: uppercase
-        color: #222222
+        @include header
     &_item 
         display: flex
         justify-content: space-around
@@ -148,12 +153,66 @@ nav
                 font-weight: 300
                 font-size: 15px
                 color: #202020
-    &_img 
+        &_img 
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 128px
+            height: 128px
+            background-color: #1EACC7
+            border-radius: 100%
+.mobile
+    min-height: 864px
+    background: url("../img/mobile_bg.png") center center/cover no-repeat
+    .row
+        margin-top: 32px
+    &_adv
+        @include advant
+    &_title
+        @include header
+    &_subtitle
+        font-weight: 400
+        font-size: 17px
+        text-align: center
+        color: #222222
+    &_item
         display: flex
-        justify-content: center
+        flex-flow: column wrap
+        justify-content: space-between
         align-items: center
-        width: 128px
-        height: 128px
-        background-color: #1EACC7
-        border-radius: 100%
+        width: 320px
+        height: 280px
+        margin: 0 auto
+        margin-bottom: 19px
+        padding: 91px 0 32px 0
+        &_title
+            font-weight: 400
+            font-size: 24px
+            line-height: 31px
+            text-align: center
+            text-transform: uppercase
+            color: #FFFFFF
+        &_plus
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 29px
+            height: 29px
+            background-color: #000000
+            border-radius: 100%
+            padding: 6px
+            bottom: 35px
+
+        &_1
+            background: url("../img/mobile_item_1.png") center center/cover no-repeat
+        &_2
+            background: url("../img/mobile_item_2.png") center center/cover no-repeat
+        &_3
+            background: url("../img/mobile_item_3.png") center center/cover no-repeat
+        &_4
+            background: url("../img/mobile_item_4.png") center center/cover no-repeat
+        &_5
+            background: url("../img/mobile_item_5.png") center center/cover no-repeat
+        &_6
+            background: url("../img/mobile_item_6.png") center center/cover no-repeat       
 
