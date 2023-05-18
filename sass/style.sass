@@ -21,7 +21,15 @@
     text-align: center
     text-transform: uppercase
     color: #222222
+
+@mixin btn_hover
+    &:hover
+        background-image: none
+        background-color: $blue
+
     
+
+$blue: #1EACC7  
 
 header 
     position: relative
@@ -84,8 +92,8 @@ nav
         box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12)
         border-radius: 4px
         border: none
-
-
+        @include btn_hover
+            
 .main 
     height: 799px
     background: url("../img/uber_bg.png") center center/cover no-repeat
@@ -127,8 +135,8 @@ nav
         color: #FFFFFF
         text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
         border: none
-
-
+        @include btn_hover
+                     
 .reasons 
     margin: 20px 0px 64px 0
     min-height: 817px
@@ -148,7 +156,7 @@ nav
                 font-weight: 400
                 font-size: 17px
                 line-height: 21px
-                color: #1EACC7
+                color: $blue
             &_descr
                 font-weight: 300
                 font-size: 15px
@@ -159,7 +167,7 @@ nav
             align-items: center
             width: 128px
             height: 128px
-            background-color: #1EACC7
+            background-color: $blue
             border-radius: 100%
 .mobile
     min-height: 840px
@@ -248,6 +256,8 @@ nav
         width: 759px
         height: 480px
         margin: 0 auto
+        img
+            width: 100%
         &_subtitle
             margin: 0 auto
             width: 327px
@@ -257,4 +267,54 @@ nav
             line-height: 24px
             text-align: center
             color: #222222
+.conditions
+    min-height: 917px
+    padding: 66px 0 87px 0
+    &_adv
+        @include advant
+    &_title
+        @include header
+    &_item
+        padding: 33px 0
+        &_nmb
+            margin-bottom: 0px
 
+        &_header
+            font-weight: 400
+            font-size: 22px
+            line-height: 24px
+            color: $blue
+        &_header-red
+            color: #FF5656
+        &_list      
+            padding-top: 10px
+            list-style-type: none
+            li
+                position: relative
+                font-weight: 300
+                font-size: 17px
+                line-height: 30px
+                &:before
+                    content: ""
+                    display: block
+                    position: absolute
+                    left: -30px
+                    top: 10px
+                    transform: translateY(-50%)
+                    width: 21px
+                    height: 20px
+                    margin: 5px 5px 0 0
+                    background: url("../icon/check_blue.png") center center/cover no-repeat
+        &_list-red      
+            li
+                &:before
+                    background: url("../icon/check_red.png") center center/cover no-repeat
+
+        &_descr
+            font-weight: 300
+            font-size: 17px
+            line-height: 24px
+            color: $blue
+        
+
+        
