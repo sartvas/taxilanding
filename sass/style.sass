@@ -136,6 +136,9 @@ nav
         text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
         border: none
         @include btn_hover
+    &_btn-click
+        background: none
+
                      
 .reasons 
     margin: 20px 0px 64px 0
@@ -269,7 +272,7 @@ nav
             color: #222222
 .conditions
     min-height: 917px
-    padding: 66px 0 87px 0
+    padding: 66px 0 45px 0
     &_adv
         @include advant
     &_title
@@ -315,6 +318,42 @@ nav
             font-size: 17px
             line-height: 24px
             color: $blue
+        
+.black-div
+    width: 200px
+    height: 200px
+    background-color: $blue
+
+
+.world
+    min-height: 717px
+    padding: 48px 0 21px 0
+    background: url('../img/world_bg.png') center center/cover no-repeat
+    .wrapper
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: 700px
+
+    &_adv
+        width: 75px
+        height: 25px
+        font-weight: 400
+        font-size: 11px
+        line-height: 11px
+        text-align: center
+        text-transform: uppercase
+        color: #070716
+    &_descr
+        font-weight: 400
+        font-size: 15px
+        line-height: 68px
+        text-align: center
+        text-transform: uppercase
+
+        a
+            text-decoration: none
+            color: #1FBAD6
         
 
         
