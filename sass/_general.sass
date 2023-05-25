@@ -1,36 +1,36 @@
 * 
     font-family: 'Roboto', sans-serif
 
-@media (max-width: 768px)
-    .choice_img
-        img
-            width: 65%
-@import 'mixins'
-@import 'variable'
-
+.xs-show
+    display: none
 
 header 
     position: relative
 
-
 nav 
-    height: 53px
-    background: #212121
+    padding-top: 10px
+    height: 50px
+    background-color: #212121
 
+.hamburger
+    display: none
 
 .menu 
     display: flex
     justify-content: space-between
-    padding: 13px 70px
+    padding: 1px 70px 0
     margin: 0
     list-style-type: none
     &_link
-        font-style: normal
-        font-weight: 300
+        color: #ffffff
         font-size: 15px
-        color: #FFFF
-        text-decoration: none
-
+        font-weight: 300
+        &:hover
+            text-decoration: none
+            color: $blue
+    &_item
+        border-right: 2px dotted black
+        padding-right: 28px
 
 .subheader 
     position: absolute
@@ -59,10 +59,7 @@ nav
         text-transform: uppercase
         a
             color: #FFFFFF
-    button
-        display: block
-        padding-left: 10px
-    &_btn 
+    &_btn
         width: 162px
         height: 46px
         font-weight: 400
@@ -174,7 +171,7 @@ nav
         flex-flow: column wrap
         justify-content: space-between
         align-items: center
-        width: 320px
+        width: 90%
         height: 280px
         margin: 0 auto
         margin-bottom: 19px
@@ -317,21 +314,36 @@ nav
         height: 700px
 
     &_adv
-        width: 75px
-        height: 25px
+        margin: 0 auto
+        width: 115px
+        height: 27px
+        background: #FFFFFF
         font-weight: 400
         font-size: 11px
-        line-height: 11px
+        line-height: 29px
         text-align: center
         text-transform: uppercase
         color: #070716
+    &_title
+        margin-top: 27px
+        font-weight: 700
+        font-size: 38px
+        text-align: center
+        text-transform: uppercase
+        color: #FFFFFF
+    &_subtitle
+        font-weight: 400
+        font-size: 17px
+        line-height: 21px
+        text-align: center
+        color: #FFFFFF
+        margin-bottom: 64px
     &_descr
         font-weight: 400
         font-size: 15px
         line-height: 68px
         text-align: center
         text-transform: uppercase
-
         a
             text-decoration: none
             color: #1FBAD6
