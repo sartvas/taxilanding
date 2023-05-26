@@ -23,7 +23,7 @@
                 padding-left: 13px
     .mobile
         &_item
-            width: 318px
+            width: 90%
 
 @media (max-width: 992px)
     .menu
@@ -33,9 +33,6 @@
             padding-right: 3px
         &_link
             font-size: 13px
-    .mobile
-        &_item
-            width: 229px
     .subheader
         &_logo
             img
@@ -45,21 +42,26 @@
         &_btn
             width: 151px
             font-size: 12px
+    .reasons
+        margin: 10px 0 10px 0
+        &_header
+            font-size: 20px
+        &_item
+            display: flex
+            flex-direction: column
+            width: 100%
+            margin: 15px 0 0 0
+            padding: 0
+            &_img
+                height: 121px
+            &_text
+                margin-top: 13px
+                height: auto
     .main
         &_header
-            font-size: 40px
+            font-size: 35px
         &_subheader
-            font-size: 25px
-    .reasons
-        &_header
-            font-size: 37px
-        &_item
-            width: 352px
-            &_img
-                height: 95px
-            &_text
-                &_descr
-                    font-size: 13px
+            font-size: 20px
     .mobile
         .row
             margin-top: 15px
@@ -86,7 +88,7 @@
             width: 122px
             padding-left: 23px
 
-@media (max-width: 767px)
+@media (max-width: 768px)
     nav
         position: fixed
         width: 100%
@@ -125,7 +127,7 @@
         justify-content: center
         align-items: center
         top: 0
-        left: -300px
+        left: -400px
         height: 100vh
         padding: 20px 15px
         background-color: rgba(0,0,0, .8)
@@ -138,10 +140,16 @@
             margin-top: 10px
     .subheader
         margin: 30px 0 20px 0
+    .reasons 
+        &_item 
+            &_text
+                width: 100%
+                height: auto
 
-@media (max-width: 575px)
+
+@media (max-width: 576px)
     .main
-        height: 668px
+        height: 580px
         &_header
             font-size: 56px
             line-height: 63px
@@ -169,28 +177,33 @@
         display: block
 
     .reasons
-        margin: 0
+        margin: 15px 0 15px 0
         &_header
             font-size: 20px
         &_item
             display: flex
             flex-direction: column
             width: 100%
-            margin: 0 auto
+            margin: 15px 0 0 0
             padding: 0
             &_img
                 height: 130px
             &_text
                 margin-top: 13px
-                height: 136px
 
     .mobile
+        padding: 20px 0 20px 0
         &_title
             font-size: 25px
         &_subtitle
-            font-size: 21px
+            font-size: 23px
+        &_item
+            &_title
+                font-size: 24px
 
     .choice
+        min-height: 500px
+        background: rgb(0, 0, 0)
         &_title
             display: none
         &_subtitle
@@ -199,6 +212,75 @@
             padding-top: 38px
             &_subtitle
                 color: #FFFF
+    .conditions
+        &_adv
+            width: 147px
+            height: 34px
+            font-size: 14px
+            line-height: 34px
+        &_title
+            &_xl
+                display: none
+            &_xs
+                display: block
+                font-size: 20px
+                padding-top: 11px
+    .world
+        height: 503px
+        .wrapper
+             height: 490px
+        &_adv
+            width: 89px
+            font-size: 13px
+        &_title
+            font-size: 23px
+            margin-top: 11px
+    .footer
+        &_xl
+            display: none
+        &_xs
+            display: flex
+            flex-direction: column
+        &_list
+            ul
+                padding: 10px 0 0 0
+            width: 100%
+            &_main
+                padding: 20px 0 0 0
+            &_descr
+                padding: 0
+                line-height: 15px
+                font-size: 9px
+            
+        &_soc, &_mobile
+            padding: 10px 0 0 0
+            text-align: center
+            width: 100%
+
+
+    
+@media (max-width: 378px)
+    .menu
+        &_link
+            font-size: 25px
+    .main
+        &_btn
+            margin: 30px auto 20px auto
+    .world
+        height: 540px
+    .subheader
+        &_phone
+            font-size: 17px
+            line-height: 11px
+    .footer
+        &_list
+            ul
+                padding: 10px 0 0 0
+            &_main
+                font-size: 13px
+            &_descr
+                font-size: 11px
+
 
                 
 
