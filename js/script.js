@@ -19,22 +19,26 @@ window.addEventListener('DOMContentLoaded', () => {
           modal = document.querySelector('.modal'),
           modalClose = document.querySelector('[data-close]');
 
-    dataModal.forEach(item => {
-        item.addEventListener('click', ()=>{
-            modal.classList.remove('hide');
-            modal.classList.add('show');
-            document.body.style.overflow = 'hidden';
-        })
-    })
+    function openModal(){
+        modal.classList.remove('hide');
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+        clearTimeout(modalSetTimeout);
+    }
 
-    
     function closeModal() {
         modal.classList.add('hide');
         modal.classList.remove('show');
-        // Либо вариант с toggle - но тогда назначить класс в верстке
         document.body.style.overflow = '';
     }
-    
+
+    dataModal.forEach(item => {
+        item.addEventListener('click', ()=>{
+            openModal();
+        })
+    })
+
+
     modalClose.addEventListener('click', closeModal);
 
     modal.addEventListener('click', (e) => {
@@ -48,6 +52,18 @@ window.addEventListener('DOMContentLoaded', () => {
             closeModal();
         }
     });
+
+    const modalSetTimeout = setTimeout(openModal, 20000);
+
+    function modalOpenToFooter(){
+        if(window.scrollY + document.documentElement.clientHeight >= document.documentElement.scrollHeight){
+            openModal();
+            window.removeEventListener('scroll', modalOpenToFooter);
+        }
+    }
+
+    window.addEventListener('scroll', modalOpenToFooter);
+
 
 
 
