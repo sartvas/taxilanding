@@ -20,24 +20,34 @@ window.addEventListener('DOMContentLoaded', () => {
           modalClose = document.querySelector('[data-close]');
 
     dataModal.forEach(item => {
-        item.addEventListener('click', () =>{
-            modal.style.display = 'block';
+        item.addEventListener('click', ()=>{
+            modal.classList.remove('hide');
+            modal.classList.add('show');
             document.body.style.overflow = 'hidden';
         })
     })
 
-    modalClose.addEventListener('click', () => {
-        modal.style.display = 'none';
+    
+    function closeModal() {
+        modal.classList.add('hide');
+        modal.classList.remove('show');
+        // Либо вариант с toggle - но тогда назначить класс в верстке
         document.body.style.overflow = '';
-    })
+    }
+    
+    modalClose.addEventListener('click', closeModal);
 
     modal.addEventListener('click', (e) => {
-        if(e.target === modal){
-            modal.style.display = 'none';
-            document.body.style.overflow = '';
+        if (e.target === modal) {
+            closeModal();
         }
-    })
+    });
 
+    document.addEventListener('keydown', (e) => {
+        if (e.code === "Escape" && modal.classList.contains('show')) { 
+            closeModal();
+        }
+    });
 
 
 
